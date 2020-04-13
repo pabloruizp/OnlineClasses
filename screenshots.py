@@ -6,9 +6,11 @@ from datetime import datetime
 from PIL import ImageChops
 
 # Record rate (screenshots per second)
-rate = 100
+rate = 1000
 # Folder destination
 dst = ''
+# Tolerance %
+tolerance = 50
 
 def menu ():
     print("Online Classes - Press Enter to record", end="", flush=True)
@@ -51,9 +53,14 @@ def record ():
         diff = ImageChops.difference(prev,im)
 
         if diff.getbbox():
-            im.save(dst + '/'+ str(datetime.now()) + '.png')
+            area = diff.size[0] * diff.size[1]
+            
+            coorDiff = diff.getbbox()
+            areaDiff = (coorDiff[2] - coorDiff[0]) * (coorDiff[3] - coorDiff[1])
 
-        prev = im
+            if (areaDiff / area) * 100 > tolerance:  
+                im.save(dst + '/'+ str(datetime.now()) + '.png')
+                prev = im
 
 
 if __name__ == '__main__':
