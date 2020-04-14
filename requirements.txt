@@ -1,3 +1,7 @@
 Pillow
 keyboard
 pyscreenshot
+moviepy
+numpy
+matplotlib
+progress

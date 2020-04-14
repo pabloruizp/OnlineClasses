@@ -2,8 +2,9 @@ import os
 import time
 import keyboard
 import pyscreenshot as ImageGrab
-from datetime import datetime
+
 from PIL import ImageChops
+from datetime import datetime
 
 # Record rate (screenshots per second)
 rate = 1000
@@ -13,8 +14,6 @@ dst = ''
 tolerance = 50
 
 def menu ():
-    print("Online Classes - Press Enter to record", end="", flush=True)
-    input()
     record()
 
 def record ():
