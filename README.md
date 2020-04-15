@@ -15,3 +15,13 @@ pip3 install -r requirements.txt
 ```python
 pip install -r requirements.txt
 ```
+
+## Usage
+### Linux
+```python
+python3 main.py
+```
+### Windows
+```python
+python main.py
+```
