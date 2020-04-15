@@ -9,9 +9,9 @@ Make your online classes much easier
 
 ### Linux
 ```python
-pip3 install -r requeriments.txt
+pip3 install -r requirements.txt
 ```
 ### Windows
 ```python
-pip install -r requeriments.txt
+pip install -r requirements.txt
 ```
