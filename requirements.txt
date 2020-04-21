@@ -5,3 +5,6 @@ moviepy
 numpy
 matplotlib
 progress
+pyperclip
+PyPDF2
+pdf2image
